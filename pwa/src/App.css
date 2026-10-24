@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, rgba(209, 127, 247, 0.1), rgba(157, 214, 252, 0.1));
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 36px;
+  background: linear-gradient(to right, rgb(209, 127, 247), rgb(157, 214, 252));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-header p {
+  color: #64748b;
+  margin: 8px 0 0;
+}
+
+.shared-content, .instructions {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 32px;
+}
+
+.shared-content h2, .instructions h2 {
+  margin-top: 0;
+}
+
+.shared-content pre {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.status {
+  color: #10b981;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.instructions ol {
+  line-height: 1.8;
+  color: #475569;
+}

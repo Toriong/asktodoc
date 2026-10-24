@@ -1,0 +1,61 @@
+.asktodoc-send-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  margin: 8px 0;
+  background: linear-gradient(to right, rgba(209, 127, 247, 1), rgba(157, 214, 252, 1));
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.asktodoc-send-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.asktodoc-send-button:active {
+  transform: translateY(0);
+}
+
+.asktodoc-toast {
+  position: fixed;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 10000;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.asktodoc-toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.asktodoc-toast-success {
+  background: #10b981;
+  color: white;
+}
+
+.asktodoc-toast-error {
+  background: #ef4444;
+  color: white;
+}
+
+.asktodoc-toast-info {
+  background: rgba(157, 214, 252, 1);
+  color: #1e293b;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AskToDoc Demo - Popup</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1280px;
+      height: 800px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .demo-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+    }
+    .popup-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: linear-gradient(to right, rgba(209, 127, 247, 1), rgba(157, 214, 252, 1));
+      color: white;
+      border-radius: 8px 8px 0 0;
+      margin: -40px -40px 20px;
+    }
+    .icon { width: 32px; height: 32px; font-size: 24px; }
+    .popup-title { font-size: 18px; font-weight: 600; }
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .setting-label { font-weight: 500; font-size: 14px; }
+    .setting-description { font-size: 12px; color: #64748b; margin-top: 4px; }
+    .toggle-button {
+      position: relative;
+      width: 48px;
+      height: 24px;
+      background: #cbd5e1;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-button.toggle-on {
+      background: linear-gradient(to right, rgba(209, 127, 247, 1), rgba(157, 214, 252, 1));
+    }
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .toggle-on .toggle-slider { transform: translateX(24px); }
+    .menu-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: left;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: all 0.2s;
+    }
+    .menu-button:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, rgba(209, 127, 247, 1), rgba(157, 214, 252, 1));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="popup-header">
+      <div class="icon">📄</div>
+      <h1 class="popup-title">AskToDoc</h1>
+    </div>
+
+    <div class="setting-item">
+      <div>
+        <div class="setting-label">Direct Upload Mode</div>
+        <div class="setting-description">Copy to clipboard (no sign-in needed)</div>
+      </div>
+      <button class="toggle-button" id="toggle">
+        <div class="toggle-slider"></div>
+      </button>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;">
+
+    <button class="menu-button">📖 How to use AskToDoc</button>
+    <button class="menu-button">⚙️ Settings</button>
+
+    <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 16px 0;">
+
+    <button class="cta-button">🚀 Get Drive I/O</button>
+
+    <p style="text-align: center; font-size: 12px; color: #94a3b8; margin-top: 16px;">
+      Made by the Drive I/O team
+    </p>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const desc = document.querySelector('.setting-description');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('toggle-on');
+      if (toggle.classList.contains('toggle-on')) {
+        desc.textContent = 'Create Docs directly (requires sign-in)';
+      } else {
+        desc.textContent = 'Copy to clipboard (no sign-in needed)';
+      }
+    });
+  </script>
+</body>
+</html>
