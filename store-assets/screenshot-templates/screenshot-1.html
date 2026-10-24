@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      width: 1280px; 
+      height: 800px; 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow: hidden;
+    }
+    .screenshot {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(209,127,247,0.1) 0%, rgba(157,214,252,0.1) 100%);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .headline {
+      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, rgb(209,127,247), rgb(157,214,252));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .content {
+      flex: 1;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .demo-search {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 24px;
+      border: 2px solid #e8eaed;
+    }
+    .send-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, rgb(209,127,247), rgb(157,214,252));
+      color: white;
+      border: none;
+      border-radius: 24px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+    }
+    .ai-content h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #202124;
+    }
+    .ai-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #5f6368;
+      margin-bottom: 12px;
+    }
+    .ai-content ul {
+      list-style-position: inside;
+      color: #5f6368;
+      font-size: 16px;
+    }
+    .ai-content li {
+      margin: 8px 0;
+    }
+    .gradient-border {
+      border: 4px solid transparent;
+      border-radius: 24px;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(to right, rgb(209,127,247), rgb(157,214,252)) border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="screenshot">
+    <div class="headline">One-Click Send to Docs Button on AI Answers</div>
+    <div class="content gradient-border">
+      <div class="demo-search">
+        <button class="send-button">📄 Send to Docs</button>
+        <div class="ai-content">
+          <h2>How Photosynthesis Works</h2>
+          <p>Photosynthesis is the process by which plants convert light energy into chemical energy...</p>
+          <ul>
+            <li>Light-dependent reactions absorb energy</li>
+            <li>Calvin cycle converts CO₂ to glucose</li>
+            <li>Oxygen is released as a byproduct</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

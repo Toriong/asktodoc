@@ -1,0 +1,26 @@
+PLACEHOLDER STORE ASSETS
+
+The following assets need to be created before Chrome Web Store submission:
+
+SCREENSHOTS (1280x800 PNG):
+1. screenshot-1-send-button.png
+2. screenshot-2-formatted-content.png
+3. screenshot-3-source-links.png
+4. screenshot-4-clipboard-mode.png
+5. screenshot-5-direct-upload.png
+6. screenshot-6-settings.png
+
+PROMOTIONAL IMAGES:
+- promo-small-440x280.png (Small promotional tile)
+- promo-marquee-1400x560.png (Marquee)
+- icon-store-128.png (Store icon)
+
+Generate these using:
+- screenshot-templates/ HTML files (capture in browser at correct resolution)
+- scripts/generate-screenshots.ts (automated generation)
+- Design tools (Figma, Photoshop, etc.)
+
+All assets must use the brand colors:
+- Gradient: rgb(209,127,247) to rgb(157,214,252)
+- Background: White or subtle gradient
+- Professional, polished appearance
