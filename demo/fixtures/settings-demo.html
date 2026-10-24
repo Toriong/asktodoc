@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AskToDoc Demo - Settings</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      padding: 40px 20px;
+    }
+    .options-container { max-width: 800px; margin: 0 auto; }
+    .options-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .icon { width: 48px; height: 48px; font-size: 36px; }
+    .options-title { font-size: 24px; font-weight: 600; margin: 0; }
+    .options-subtitle { font-size: 14px; color: #64748b; margin: 4px 0 0 0; }
+    .options-content {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .section-title { font-size: 18px; font-weight: 600; margin: 0 0 16px 0; }
+    .option-card {
+      display: flex;
+      gap: 12px;
+      padding: 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .option-card:hover {
+      border-color: rgba(157, 214, 252, 1);
+      background: #f8fafc;
+    }
+    .option-card.selected {
+      border-color: rgba(157, 214, 252, 1);
+      background: rgba(157, 214, 252, 0.1);
+    }
+    .option-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+    .option-description { font-size: 13px; color: #64748b; line-height: 1.5; }
+    .save-button {
+      width: 100%;
+      padding: 12px 24px;
+      background: linear-gradient(to right, rgba(209, 127, 247, 1), rgba(157, 214, 252, 1));
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="options-container">
+    <div class="options-header">
+      <div class="icon">📄</div>
+      <div>
+        <h1 class="options-title">AskToDoc Settings</h1>
+        <p class="options-subtitle">Configure how you send answers to Google Docs</p>
+      </div>
+    </div>
+
+    <div class="options-content">
+      <h2 class="section-title">Upload Mode</h2>
+      
+      <label class="option-card selected" data-mode="clipboard">
+        <input type="radio" name="mode" checked>
+        <div>
+          <div class="option-title">Clipboard Mode (Default)</div>
+          <div class="option-description">
+            Copies formatted content to your clipboard and opens docs.new. 
+            You paste the content yourself. No sign-in required.
+          </div>
+        </div>
+      </label>
+
+      <label class="option-card" data-mode="upload">
+        <input type="radio" name="mode">
+        <div>
+          <div class="option-title">Direct Upload Mode</div>
+          <div class="option-description">
+            Creates the Google Doc automatically and opens it. 
+            Requires signing in with Google (drive.file scope only).
+          </div>
+        </div>
+      </label>
+
+      <button class="save-button">Save Settings</button>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.option-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        card.querySelector('input').checked = true;
+      });
+    });
+  </script>
+</body>
+</html>
